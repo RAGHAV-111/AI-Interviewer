@@ -1,6 +1,4 @@
-<img width="816" height="1056" alt="Main@1x" src="https://github.com/user-attachments/assets/0300e4d5-da0a-4175-916f-dd19ad0462e3" />
-<img width="816" height="1056" alt="Conversation@1x" src="https://github.com/user-attachments/assets/5befdfab-6d34-4f90-9b52-59c585907f5f" />
-<img width="816" height="1056" alt="Scoring@1x" src="https://github.com/user-attachments/assets/6b3fecfe-1790-4f80-956c-19384b9af518" />
+
 <img width="1850" height="528" alt="image" src="https://github.com/user-attachments/assets/8b75e527-6c3f-48c2-9be8-eb84fff4942d" />
 
 <img width="2704" height="1756" alt="image" src="https://github.com/user-attachments/assets/ced742ee-d8ec-4939-95cc-d37177b1f9d7" />
@@ -31,3 +29,7 @@ The two pulsing orbs on screen are just live volume meters (RMS of the mic strea
 Candidate clicks "End interview" → frontend closes the WebSocket → backend closes the Gemini session and flushes any last buffered transcript → navigates to /result/:id.
 GET /api/v1/result/:interviewId fetches all saved Message rows and, if not already scored, makes one non-realtime Gemini text call (calculateResult in result.ts) — feeds it the full transcript, asks for {score, feedback} as structured JSON — then marks the interview Done and stores the result.
 So there are really two separate Gemini touchpoints: Gemini Live for the real-time spoken conversation, and one plain Gemini text call afterward for grading the transcript.
+
+<img width="816" height="1056" alt="Main@1x" src="https://github.com/user-attachments/assets/0300e4d5-da0a-4175-916f-dd19ad0462e3" />
+<img width="816" height="1056" alt="Conversation@1x" src="https://github.com/user-attachments/assets/5befdfab-6d34-4f90-9b52-59c585907f5f" />
+<img width="816" height="1056" alt="Scoring@1x" src="https://github.com/user-attachments/assets/6b3fecfe-1790-4f80-956c-19384b9af518" />
